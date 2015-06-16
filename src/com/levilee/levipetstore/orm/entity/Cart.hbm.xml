@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.levilee.levipetstore.orm.entity">
+	<class name="Cart" table="cart">
+		<composite-id name="cartKey"
+			class="com.levilee.levipetstore.orm.entity.key.CartKey">
+			<key-property name="userid" column="userid" type="string" />
+			<key-property name="itemid" column="itemid" type="string" />
+		</composite-id>
+		<property name="amount" type="int" column="amount"></property>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.levilee.levipetstore.orm.entity">
+	<class name="Profile"  table="profile">
+		<id name="userid" type="string" column="userid">
+			<generator class="assigned"></generator>
+		</id>
+		<property name="langpref" type="string" column="langpref"></property>
+		<property name="favcategory" type="string" column="favcategory"></property>
+		<property name="mylistopt" type="int" column="mylistopt"></property>
+		<property name="banneropt" type="int" column="banneropt"></property>
+	</class>
+</hibernate-mapping>

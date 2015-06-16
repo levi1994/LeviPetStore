@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.levilee.levipetstore.orm.entity">
+	<class name="Inventory"  table="inventory">
+		<id name="itemid" type="string" column="itemid">
+			<generator class="assigned"></generator>
+		</id>
+		<property name="qty" type="int" column="qty"></property>
+	</class>
+</hibernate-mapping>

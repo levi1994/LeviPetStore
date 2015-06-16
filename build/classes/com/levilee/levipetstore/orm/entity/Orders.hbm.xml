@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.levilee.levipetstore.orm.entity">
+	<class name="Orders"  table="orders">
+		<id name="orderid" type="int" column="orderid">
+			<generator class="assigned"></generator>
+		</id>
+		<property name="userid" type="string" column="userid"></property>
+		<property name="orderdate" type="date" column="orderdate"></property>
+		<property name="shipaddr1" type="string" column="shipaddr1"></property>
+		<property name="shipaddr2" type="string" column="shipaddr2"></property>
+		<property name="shipcity" type="string" column="shipcity"></property>
+		<property name="shipstate" type="string" column="shipstate"></property>
+		<property name="shipzip" type="string" column="shipzip"></property>
+		<property name="shipcountry" type="string" column="shipcountry"></property>
+		<property name="billaddr1" type="string" column="billaddr1"></property>
+		<property name="billaddr2" type="string" column="billaddr2"></property>
+		<property name="billcity" type="string" column="billcity"></property>
+		<property name="billstate" type="string" column="billstate"></property>
+		<property name="billzip" type="string" column="billzip"></property>
+		<property name="billcountry" type="string" column="billcountry"></property>
+		<property name="courier" type="string" column="courier"></property>
+		<property name="totalprice" type="double" column="totalprice"></property>
+		<property name="billtofirstname" type="string" column="billtofirstname"></property>
+		<property name="billtolastname" type="string" column="billtolastname"></property>
+		<property name="shiptofirstname" type="string" column="shiptofirstname"></property>
+		<property name="shiptolastname" type="string" column="shiptolastname"></property>
+		<property name="creditcard" type="string" column="creditcard"></property>
+		<property name="exprdate" type="string" column="exprdate"></property>
+		<property name="cardtype" type="string" column="cardtype"></property>
+		<property name="locale" type="string" column="locale"></property>
+	</class>
+</hibernate-mapping>

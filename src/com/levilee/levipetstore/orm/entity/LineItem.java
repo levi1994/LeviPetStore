@@ -1,22 +1,18 @@
 package com.levilee.levipetstore.orm.entity;
 
+import com.levilee.levipetstore.orm.entity.key.LineItemKey;
+
 public class LineItem {
-  private int orderid;
-  private int linenum;
+  private LineItemKey lineItemKey;
   private int quantity;
   private String itemid;
   private double unitprice;
-public int getOrderid() {
-	return orderid;
+
+public LineItemKey getLineItemKey() {
+	return lineItemKey;
 }
-public void setOrderid(int orderid) {
-	this.orderid = orderid;
-}
-public int getLinenum() {
-	return linenum;
-}
-public void setLinenum(int linenum) {
-	this.linenum = linenum;
+public void setLineItemKey(LineItemKey lineItemKey) {
+	this.lineItemKey = lineItemKey;
 }
 public int getQuantity() {
 	return quantity;

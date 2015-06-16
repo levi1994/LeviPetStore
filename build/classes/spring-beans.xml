@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 配置struts所需要的Action -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jee="http://www.springframework.org/schema/jee" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="    
+        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd  
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd  
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd  
+        http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-4.0.xsd  
+        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
+        
+       <!-- 添加工具层的Bean-->
+       <bean id="hibernateUtil" class="com.levilee.levipetstore.orm.util.HibernateUtil" scope="prototype"></bean>
+       <!--添加DAO层的bean -->
+       <bean id="commonDao" class="com.levilee.levipetstore.orm.dao.CommonDao" scope="prototype"></bean>
+       <bean id="accountDao" class="com.levilee.levipetstore.orm.dao.AccountDao" scope="prototype"></bean>
+       <bean id="cartDao" class="com.levilee.levipetstore.orm.dao.CartDao" scope="prototype"></bean>
+       <bean id="categoryDao" class="com.levilee.levipetstore.orm.dao.CategoryDao" scope="prototype"></bean>
+       <bean id="inventoryDao" class="com.levilee.levipetstore.orm.dao.InventoryDao" scope="prototype"></bean>
+       <bean id="itemDao" class="com.levilee.levipetstore.orm.dao.ItemDao" scope="prototype"></bean>
+       <bean id="lineItemDao" class="com.levilee.levipetstore.orm.dao.LineItemDao" scope="prototype"></bean>
+       <bean id="ordersDao" class="com.levilee.levipetstore.orm.dao.OrdersDao" scope="prototype"></bean>
+       <bean id="orderstatusDao" class="com.levilee.levipetstore.orm.dao.OrderstatusDao" scope="prototype"></bean>
+       <bean id="productDao" class="com.levilee.levipetstore.orm.dao.ProductDao" scope="prototype"></bean> 
+       <bean id="profileDao" class="com.levilee.levipetstore.orm.dao.ProfileDao" scope="prototype"></bean> 
+       <bean id="signonDao" class="com.levilee.levipetstore.orm.dao.SignonDao" scope="prototype"></bean> 
+       <bean id="supplierDao" class="com.levilee.levipetstore.orm.dao.SupplierDao" scope="prototype"></bean> 
+        <!-- 添加Service层的bean -->
+        <bean id="accountServiceImpl" class="com.levilee.levipetstore.model.serviceImpl.AccountServiceImpl" scope="prototype">
+               <property name="accountDao" ref="accountDao"></property>
+               <property name="signonDao" ref="signonDao"></property>
+        </bean>
+        <bean id="cartServiceImpl" class="com.levilee.levipetstore.model.serviceImpl.CartServiceImpl" scope="prototype">
+            <property name="cartDao" ref="cartDao"></property>
+        </bean>
+        <bean id="categoryServiceImpl" class="com.levilee.levipetstore.model.serviceImpl.CategoryServiceImpl" scope="prototype">
+              <property name="categoryDao" ref="categoryDao"></property>
+        </bean>
+        <bean id="inventoryServiceImpl" class="com.levilee.levipetstore.model.serviceImpl.InventoryServiceImpl" scope="prototype">
+              <property name="inventoryDao" ref="inventoryDao"></property>
+        </bean>
+        <bean id="itemServiceImpl" class="com.levilee.levipetstore.model.serviceImpl.ItemServiceImpl" scope="prototype">
+              <property name="itemDao" ref="itemDao"></property>
+        </bean>
+        <bean id="lineItemServiceImpl" class="com.levilee.levipetstore.model.serviceImpl.LineItemServiceImpl" scope="prototype">
+              <property name="lineItemDao" ref="lineItemDao"></property>
+        </bean>
+        <bean id="ordersServiceImpl" class="com.levilee.levipetstore.model.serviceImpl.OrdersServiceImpl" scope="prototype">
+               <property name="ordersDao" ref="ordersDao"></property>
+        </bean>
+        <bean id="productServiceImpl" class="com.levilee.levipetstore.model.serviceImpl.ProductServiceImpl" scope="prototype">
+               <property name="productDao" ref="productDao"></property>
+        </bean>
+        <bean id="profileServiceImpl" class="com.levilee.levipetstore.model.serviceImpl.profileServiceImpl" scope="prototype">
+               <property name="profileDao" ref="profileDao"></property>
+        </bean>
+        <bean id="signonServiceImpl" class="com.levilee.levipetstore.model.serviceImpl.SignonServiceImpl" scope="prototype">
+               <property name="signonDao" ref="signonDao"></property>
+        </bean>
+        <bean id="supplierServiceImpl" class="com.levilee.levipetstore.model.serviceImpl.SupplierServiceImpl" scope="prototype">
+               <property name="supplierDao" ref="supplierDao"></property>
+        </bean>
+       
+</beans>

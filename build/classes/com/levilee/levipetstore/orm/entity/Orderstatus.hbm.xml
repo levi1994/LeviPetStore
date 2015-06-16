@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.levilee.levipetstore.orm.entity">
+	<class name="Orderstatus" table="orderstatus">
+		<composite-id name="orderstatusKey"
+			class="com.levilee.levipetstore.orm.entity.key.OrderstatusKey">
+			<key-property name="orderid" column="orderid" type="int" />
+			<key-property name="linenum" column="linenum" type="int" />
+		</composite-id>
+		<property name="timestamp" type="date" column="timestamp"></property>
+		<property name="status" type="string" column="status"></property>
+	</class>
+</hibernate-mapping>

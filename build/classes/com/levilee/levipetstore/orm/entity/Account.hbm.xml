@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.levilee.levipetstore.orm.entity">
+	<class name="Account"  table="account">
+		<id name="userid" type="string" column="userid">
+			<generator class="assigned"></generator>
+		</id>
+		<property name="email" type="string" column="email"></property>
+		<property name="firstname" type="string" column="firstname"></property>
+		<property name="lastname" type="string" column="lastname"></property>
+		<property name="status" type="string" column="status"></property>
+		<property name="addr1" type="string" column="addr1"></property>
+		<property name="addr2" type="string" column="addr2"></property>
+		<property name="city" type="string" column="city"></property>
+		<property name="zip" type="string" column="zip"></property>
+		<property name="country" type="string" column="country"></property>
+		<property name="phone" type="string" column="phone"></property>
+	</class>
+</hibernate-mapping>

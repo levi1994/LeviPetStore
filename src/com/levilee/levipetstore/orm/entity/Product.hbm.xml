@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.levilee.levipetstore.orm.entity">
+	<class name="Product"  table="product">
+		<id name="productid" type="string" column="productid">
+			<generator class="assigned"></generator>
+		</id>
+		<property name="category" type="string" column="category"></property>
+		<property name="name" type="string" column="name"></property>
+		<property name="descn" type="string" column="descn"></property>
+	</class>
+</hibernate-mapping>

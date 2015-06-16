@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.levilee.levipetstore.orm.entity">
+	<class name="Item"  table="item">
+		<id name="itemid" type="string" column="itemid">
+			<generator class="assigned"></generator>
+		</id>
+		<property name="productid" type="string" column="productid"></property>
+		<property name="listprice" type="double" column="listprice"></property>
+		<property name="unitcost" type="double" column="unitcost"></property>
+		<property name="supplier" type="int" column="supplier"></property>
+		<property name="status" type="string" column="status"></property>
+		<property name="attr1" type="string" column="attr1"></property>
+		<property name="attr2" type="string" column="attr2"></property>
+		<property name="attr3" type="string" column="attr3"></property>
+		<property name="attr4" type="string" column="attr4"></property>
+		<property name="attr5" type="string" column="attr5"></property>
+	</class>
+</hibernate-mapping>

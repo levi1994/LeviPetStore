@@ -1,26 +1,22 @@
 package com.levilee.levipetstore.orm.entity;
 
+import com.levilee.levipetstore.orm.entity.key.CartKey;
+
 public class Cart {
-	private String userid;
-	private String itemid;
+	private CartKey cartKey;
 	private int amount;
-	public String getUserid() {
-		return userid;
-	}
-	public void setUserid(String userid) {
-		this.userid = userid;
-	}
-	public String getItemid() {
-		return itemid;
-	}
-	public void setItemid(String itemid) {
-		this.itemid = itemid;
-	}
 	public int getAmount() {
 		return amount;
 	}
 	public void setAmount(int amount) {
 		this.amount = amount;
 	}
+	public CartKey getCartKey() {
+		return cartKey;
+	}
+	public void setCartKey(CartKey cartKey) {
+		this.cartKey = cartKey;
+	}
+
 
 }

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.levilee.levipetstore.orm.entity">
+	<class name="Bannerdata" table="bannerdata">
+		<id name="favcategory" type="string" column="favcategory">
+			<generator class="assigned"></generator>
+		</id>
+		<property name="bannername" type="string" column="bannername"></property>
+	</class>
+</hibernate-mapping>

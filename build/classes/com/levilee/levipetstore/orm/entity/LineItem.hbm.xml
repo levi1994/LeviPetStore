@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.levilee.levipetstore.orm.entity">
+	<class name="LineItem"  table="lineItem">
+		<composite-id name="lineItemKey"  class="com.levilee.levipetstore.orm.entity.key.LineItemKey">
+            <key-property name="orderid" column="orderid"  type="int"/>
+            <key-property name="linenum" column="linenum"  type="int"/>
+        </composite-id>
+		<property name="itemid" type="string" column="itemid"></property>
+		<property name="quantity" type="int" column="quantity"></property>
+		<property name="unitprice" type="double" column="unitprice"></property>
+	</class>
+</hibernate-mapping>
